@@ -1,6 +1,0 @@
-D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\WebServiceTar\bin\WebServiceTar.dll.config
-D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\WebServiceTar\bin\WebServiceTar.dll
-D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\WebServiceTar\bin\WebServiceTar.pdb
-D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\WebServiceTar\obj\Release\WebServiceTar.csprojResolveAssemblyReference.cache
-D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\WebServiceTar\obj\Release\WebServiceTar.dll
-D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\WebServiceTar\obj\Release\WebServiceTar.pdb
