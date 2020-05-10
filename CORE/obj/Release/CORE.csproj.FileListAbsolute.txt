@@ -1,0 +1,16 @@
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\CORE.dll.config
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\CORE.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\CORE.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\DAL.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\Entidades.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\FUNCIONES.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\itextsharp.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\Newtonsoft.Json.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\DAL.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\Entidades.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\FUNCIONES.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\itextsharp.xml
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\bin\Release\Newtonsoft.Json.xml
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\obj\Release\CORE.csprojResolveAssemblyReference.cache
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\obj\Release\CORE.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\CORE\obj\Release\CORE.pdb

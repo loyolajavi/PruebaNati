@@ -1,0 +1,5 @@
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\Entidades\bin\Release\Entidades.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\Entidades\bin\Release\Entidades.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\Entidades\obj\Release\Entidades.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\Entidades\obj\Release\Entidades.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\Entidades\obj\Release\Entidades.csprojResolveAssemblyReference.cache

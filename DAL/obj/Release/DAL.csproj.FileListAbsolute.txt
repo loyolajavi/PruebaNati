@@ -1,0 +1,9 @@
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\bin\Release\DAL.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\bin\Release\DAL.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\bin\Release\Entidades.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\bin\Release\FUNCIONES.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\bin\Release\Entidades.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\bin\Release\FUNCIONES.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\obj\Release\DAL.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\DAL\obj\Release\DAL.pdb

@@ -1,0 +1,7 @@
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\FUNCIONES\bin\Debug\FUNCIONES.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\FUNCIONES\bin\Debug\FUNCIONES.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\FUNCIONES\bin\Debug\Entidades.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\FUNCIONES\bin\Debug\Entidades.pdb
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\FUNCIONES\obj\Debug\FUNCIONES.csprojResolveAssemblyReference.cache
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\FUNCIONES\obj\Debug\FUNCIONES.dll
+D:\DocumentosDescargas\uni\TFI\TFIRepo - JaviL\TFIRepo\TFISolucion\FUNCIONES\obj\Debug\FUNCIONES.pdb

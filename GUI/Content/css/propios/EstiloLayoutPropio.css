@@ -1,0 +1,183 @@
+﻿body {
+    padding-top: 70px; /*El padding es necesario para que funcione el .navbar-fixed-top*/
+}
+
+.img-logo {
+    max-height: 40px;
+    padding-top: 10px;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.nav-links > li > a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.nav-navegacion {
+    max-height: 10px;
+    min-height: 30px;
+    border-radius: 0px;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+    .caption h4 {
+        white-space: pre-wrap;
+    }
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+    .thumbnail .caption-full {
+        padding: 9px;
+        color: #333;
+    }
+
+.item-toolbar {
+    margin: 10px;
+    text-align: center;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.precio {
+    font: 400 19px/27px "Open Sans", "Roboto", sans-serif;
+    color: #424242;
+}
+
+.notification {
+    background-color: #f3d1d1;
+    vertical-align: middle;
+    height: 30px;
+    padding: 5px;
+}
+
+.requerido {
+    color: red;
+    margin-left: 3px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.g-recaptcha {
+    margin-bottom: 300px;
+    margin-left: 315px;
+}
+
+#btnsContacto {
+    margin-bottom: 60px;
+    margin-left: 300px;
+}
+
+#txtSearch {
+    margin-bottom: 0px;
+}
+
+#imglogoempresa {
+    margin-top: 10px;
+}
+
+.TextoFooter {
+    color: white;
+}
+
+.drop-image-div {
+    height: 50px;
+    width: 80px;
+}
+
+.drop-btn {
+    height: 40px;
+    padding-top: 10px;
+}
+
+.dropdown-menu {
+    border-radius: 0px;
+}
+
+.drop-image {
+    max-width: 50px;
+    max-height: 50px;
+    padding: 5px 0;
+}
+
+.drop-item {
+    vertical-align: middle;
+    border-bottom: 1px solid #F2F2F2;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.menuPrincipal {
+    z-index: 2;
+}
+
+.menuSecundario {
+    z-index: 1;
+    margin-top: 60px;
+}
+
+.paddingPaginas {
+    padding-top: 20px;
+}
+
+.breadcrumb {
+        border-radius: 0px;
+}
+
+.breadcrumb > span > span > li {
+    display: inline-block;
+    height:30px;
+}
+
+.breadcrumb > span > span a {
+    text-decoration: none;
+    color: #00a9c6;
+}
+
+    .breadcrumb > span > span a:hover {
+        text-decoration: underline;
+    }
+
+.breadcrumb > span > span.active {
+    color: black;
+}
+
+.breadcrumb > span > span.path {
+    color: #d1d1d1;
+    padding: 0 20px;
+}

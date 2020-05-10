@@ -1,0 +1,454 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LayoutAdministracion.master.cs" Inherits="TFI.GUI.General.LayoutAdministracion" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title></title>
+
+    <link href="/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Scripts/thirdparty/Autocomplete/jquery-ui.css" rel="stylesheet" />
+    <link href="/Content/css/propios/EstiloLayoutPropio.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+
+    <form runat="server">
+        <asp:ScriptManager ID="ScriptManagerAdministracion" runat="server" >
+        </asp:ScriptManager>
+        <!-- Menu -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse navbar-fixed-top menuPrincipal">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div style="vertical-align: middle;" id="idlogoempresa">
+                            <a href="/Areas/Public/Forms/Home.aspx">
+                                <img class="img-responsive img-logo" src="/Content/Images/Empresas/Logo.png" alt="Empresa" style="height: 40px;" /></a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <div class="nav navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <asp:Panel runat="server" DefaultButton="btnBuscar">
+                                    <input type="text" id="txtSearch" maxlength="100" runat="server" class="form-control" placeholder="<%$Resources:Global, Buscar1 %>" />
+                                    <asp:LinkButton runat="server" ID="btnBuscar" OnClick="searchButton_Click">
+                                    <img src="/Content/Images/Iconos/Buscar.png" />
+                                    </asp:LinkButton>
+                                </asp:Panel>
+
+                            </div>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <asp:DropDownList ID="ddlLanguages" runat="server" AutoPostBack="true" Style="margin-top: 18px; background-color: #000000; color: gray; border: none;">
+
+                                    <asp:ListItem Text="<%$Resources:Global, Espanol %>" Value="es" />
+                                    <asp:ListItem Text="<%$Resources:Global, Ingles %>" Value="en-us" />
+
+                                </asp:DropDownList>
+                            </li>
+
+                            <li>
+                                <a href="/Areas/Public/Forms/DatosPersonales.aspx" runat="server" id="EtiquetaUsuario" onclick="return true;"></a>
+                            </li>
+                            <%-- <li id="LiIdioma" runat="server">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Idioma <b class="caret"></b></a>
+                                <ul class="dropdown-menu" style="padding: 15px; min-width: 250px;">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a href="#" id="seleccionadoespanol">Español</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a href="#" id="seleccionadoingles">Ingles</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>--%>
+
+
+
+                            <li>
+                                <asp:LinkButton ID="Salir" Text="<%$Resources:Global, Salir %>" runat="server" OnClick="Salir_Click" ForeColor="White"></asp:LinkButton>
+                            </li>
+
+
+
+                            <li runat="server" id="liIngresar">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <asp:Label ID="Label1" runat="server" Text="<%$Resources:Global, Ingresar %>"></asp:Label>
+                                    <b class="caret"></b></a>
+                                <ul class="dropdown-menu" style="padding: 15px; min-width: 250px;">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div>
+
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="exampleInputEmail2">
+                                                            <asp:Label ID="Label2" runat="server" Text="<%$Resources:Global, Usuario %>"></asp:Label></label>
+                                                        <input type="text" runat="server" class="form-control" id="IngresoUsuario" placeholder="Usuario" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="exampleInputPassword2">
+                                                            <asp:Label ID="Label3" runat="server" Text="<%$Resources:Global, Contrasena %>"></asp:Label></label>
+                                                        <input type="password" runat="server" class="form-control" id="IngresoClave" placeholder="Clave" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-xs-9 col-xs-offset-3">
+                                                            <ul runat="server" id="MensajeError"></ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" />
+                                                                <asp:Label ID="Label4" runat="server" Text="<%$Resources:Global, Recordarme %>"></asp:Label>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <asp:Button ID="IngresoBoton" OnCommand="Boton_Command" CommandName="Ingreso" runat="server" CssClass="btn btn-success btn-block" Text="<%$Resources:Global, Ingresar %>" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div class="row">
+                <nav class="navbar navbar-default navbar-fixed-top menuSecundario">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="true">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="navbar-collapse collapse in" id="bs-example-navbar-collapse-2" aria-expanded="true">
+                        <nav class="menuPrincipal">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/Areas/Public/Forms/Home.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <asp:Label ID="Label5" runat="server" Text="<%$Resources:Global, Contenidos %>"></asp:Label><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <%if (this.Autenticar(new string[] { "ProductoEliminar", "ProductoAlta", "ProductoMod" }))
+                                          {%>
+                                        <li>
+                                            <a href="GestionContenidoProductos.aspx">
+                                                <asp:Label ID="Label6" runat="server" Text="<%$Resources:Global, Productos %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+                                        <%if (this.Autenticar(new string[] { "CategoriaAsociar", "CategoriaDesasociar" }))
+                                          {%>
+                                        <li>
+                                            <a href="GestionContenidoProdCat.aspx">
+                                                <asp:Label ID="Label7" runat="server" Text="<%$Resources:Global, AsociarCategorias %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "CategoriaAlta", "CategoriaMod", "CategoriaEliminar" }))
+                                          {%>
+                                        <li>
+                                            <a href="GestionContenidoCategorias.aspx">
+                                                <asp:Label ID="Label8" runat="server" Text="<%$Resources:Global, Categorias %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "AdquisicionRegistrar" }))
+                                          {%>
+                                        <li>
+                                            <a href="RegistrarAdquisicion.aspx">
+                                                <asp:Label ID="Label31" runat="server" Text="<%$Resources:Global, Adquisicion %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "StockVer", "StockAjustar" }))
+                                          {%>
+                                        <li>
+                                            <a href="GestionStock.aspx">
+                                                <asp:Label ID="Label22" runat="server" Text="<%$Resources:Global, GestionStockMenu %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "QuienesSomosMod" }))
+                                          {%>
+                                        <li>
+                                            <a href="GestionContenidoQuienesSomos.aspx">
+                                                <asp:Label ID="Label9" runat="server" Text="<%$Resources:Global, QuienesSomos %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "MonedaMod" }))
+                                          {%>
+                                        <li>
+                                            <a href="GestionMoneda.aspx">
+                                                <asp:Label ID="Label23" runat="server" Text="<%$Resources:Global, GestionMoneda %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                    </ul>
+                                </li>
+                                <%if (this.Autenticar(new string[] { "ClienteVer", "EmpleadoVer", "ClienteEliminar", "ClienteMod", "EmpleadoEliminar", "EmpleadoMod", "UsuarioAlta" }))
+                                  {%>
+                                <li id="liAdministracion">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <asp:Label ID="Label10" runat="server" Text="<%$Resources:Global, Administracion %>"></asp:Label><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <%if (this.Autenticar(new string[] { "ClienteVer", "ClienteEliminar", "ClienteMod" }))
+                                          {%>
+                                        <li>
+                                            <a href="PermisosClientes.aspx">
+                                                <asp:Label ID="Label11" runat="server" Text="<%$Resources:Global, Clientes %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "EmpleadoVer", "EmpleadoEliminar", "EmpleadoMod" }))
+                                          {%>
+                                        <li>
+                                            <a href="PermisosEmpleados.aspx">
+                                                <asp:Label ID="Label12" runat="server" Text="<%$Resources:Global, Empleados %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "UsuarioAlta" }))
+                                          {%>
+                                        <li>
+                                            <a href="AltaUsuario.aspx">
+                                                <asp:Label ID="Label30" runat="server" Text="<%$Resources:Global, AltaUsuario %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+                                    </ul>
+                                </li>
+                                <%} %>
+
+                                <%if (this.Autenticar(new string[] { "PedidoVer", "PedidoMod", "PedidoCancelar" }))
+                                  {%>
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <asp:Label ID="Label13" runat="server" Text="<%$Resources:Global, Pedidos %>"></asp:Label><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <%--<li>
+                                            <a href="#">Últimos Pedidos</a>
+                                        </li>--%>
+                                        <li>
+                                            <a href="ordenespedido.aspx">
+                                                <asp:Label ID="Label14" runat="server" Text="<%$Resources:Global, PedidosPorCliente %>"></asp:Label></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%} %>
+
+                                <%if (this.Autenticar(new string[] { "Reportes", "Graficos" }))
+                                  {%>
+                                <li id="reportes">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <asp:Label ID="Label19" runat="server" Text="<%$Resources:Global, Reportes %>"></asp:Label><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <%if (this.Autenticar(new string[] { "Reportes" }))
+                                          {%>
+                                        <li>
+                                            <a href="Reportes.aspx">
+                                                <asp:Label ID="Label20" runat="server" Text="<%$Resources:Global, Reportes %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "Graficos" }))
+                                          {%>
+                                        <li>
+                                            <a href="Graficos.aspx">
+                                                <asp:Label ID="Label21" runat="server" Text="<%$Resources:Global, Graficos %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+                                    </ul>
+                                </li>
+                                <%} %>
+
+                                <%if (this.Autenticar(new string[] { "Factura", "NDebitoAlta", "NDebito", "NCredito" }))
+                                  {%>
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <asp:Label ID="Label15" runat="server" Text="<%$Resources:Global, ComprobantesPorCliente %>"></asp:Label><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <%if (this.Autenticar(new string[] { "Factura", "NDebitoAlta" }))
+                                          {%>
+                                        <li>
+                                            <a href="FacturasCliente.aspx">
+                                                <asp:Label ID="Label16" runat="server" Text="<%$Resources:Global, Facturas %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "NCredito" }))
+                                          {%>
+                                        <li>
+                                            <a href="NCCliente.aspx">
+                                                <asp:Label ID="Label17" runat="server" Text="<%$Resources:Global, NotasDeCredito %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <%if (this.Autenticar(new string[] { "NDebito" }))
+                                          {%>
+                                        <li>
+                                            <a href="NDCliente.aspx">
+                                                <asp:Label ID="Label18" runat="server" Text="<%$Resources:Global, NotasDeDebito %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+                                    </ul>
+                                </li>
+                                <%} %>
+
+                                <%if (this.Autenticar(new string[] { "Chat" }))
+                                  {%>
+                                <li>
+                                    <a class="dropdown-toggle" href="../../../LCSK/agent.html" target="_blank">Chat</a>
+                                </li>
+                                <%} %>
+
+                                <% if (this.Autenticar(new string[] { "Logs" }))
+                                {%>
+                                <li>
+                                    <a class="dropdown-toggle" href="VerLogs.aspx">
+                                        <asp:Label ID="Label24" runat="server" Text="<%$Resources:Global, Logsdelsistema %>"></asp:Label></a>
+                                </li>
+                                <%} %>
+
+                                <%--Backup--%>
+                                <% if (this.Autenticar(new string[] { "Backup", "Restaurar" }))
+                                   {%>
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <asp:Label ID="Label25" runat="server" Text="<%$Resources:Global, BaseDatos %>"></asp:Label><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <% if (this.Autenticar(new string[] { "Backup" }))
+                                           {%>
+                                        <li>
+                                            <a href="Backup.aspx">
+                                                <asp:Label ID="Label26" runat="server" Text="<%$Resources:Global, Backup %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+
+                                        <% if (this.Autenticar(new string[] { "Restaurar" }))
+                                           {%>
+                                        <li>
+                                            <a href="Restaurar.aspx">
+                                                <asp:Label ID="Label27" runat="server" Text="<%$Resources:Global, Restaurar %>"></asp:Label></a>
+                                        </li>
+                                        <%} %>
+                                    </ul>
+                                </li>
+                                <%} %>
+                                <%--END Backup--%>
+                                
+
+                                <%--FamiliaPatente--%>
+                                <%if (this.Autenticar(new string[] { "PermisosVer", "PermisosAlta", "PermisosMod", "PermisosEliminar" }))
+                                  {%>
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <asp:Label ID="Label28" runat="server" Text="<%$Resources:Global, Permisos %>"></asp:Label><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="GestionPermisos.aspx">
+                                                <asp:Label ID="Label29" runat="server" Text="<%$ Resources:Global, Permisos %>"></asp:Label></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%--END FamiliaPatente--%>
+                                <%} %>
+                            </ul>
+
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+
+            <asp:ContentPlaceHolder ID="MiContenido" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+
+    <script src="/Scripts/thirdparty/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <%--<script src="../../../LCSK/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>--%>
+    <script src="/Scripts/thirdparty/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Scripts/shared/Funciones.js" type="text/javascript"></script>
+    
+    <%--<script src="../Scripts/thirdparty/jquery.timeago.js"></script>--%>
+    <script src="/Scripts/thirdparty/jquery.signalR-2.1.2.js" type="text/javascript"></script>
+    <%--<script src="/LCSK/assets/js/jquery.signalR-2.1.1.min.js" type="text/javascript"></script>--%>
+    <%--<script src="/signalr/hubs" type="text/javascript"></script>
+    <script src="/LCSK/agent.js" type="text/javascript"></script>--%>
+    <script src="/Scripts/thirdparty/Autocomplete/jquery-ui.js" type="text/javascript"> </script>
+
+
+    <script type="text/javascript">
+
+        //updateProductos();
+
+        //Descomentar cuando tenga lo de deseos
+        //updateDeseos();
+
+        var obtenerTags = function () {
+            var result;
+            $.ajax({
+                type: "POST",
+                url: "/Areas/Public/Forms/Home.aspx/ObtenerProductos",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                error: function (xhr, status, error) {
+                    alert(error);
+                },
+                success: function (data) {
+                    result = data.d;
+                }
+            });
+
+            return result;
+        }
+
+        var availableTags = obtenerTags();
+
+        $("#txtSearch").autocomplete({
+            source: availableTags
+        });
+
+
+
+
+    </script>
+
+    <asp:ContentPlaceHolder ID="ScriptSection" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>
